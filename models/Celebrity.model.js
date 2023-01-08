@@ -1,7 +1,7 @@
 //  Add your code here
 const { Schema, model, default: mongoose } = require("mongoose");
 
-const celebrityScheme = new Schema(
+const celebritySchema = new Schema(
   {
     name: String,
     occupation: String,
@@ -11,4 +11,4 @@ const celebrityScheme = new Schema(
   { timestamp: true }
 );
 
-module.exports = model("Celebrity", celebrityScheme);
+module.exports = model("Celebrity", celebritySchema);

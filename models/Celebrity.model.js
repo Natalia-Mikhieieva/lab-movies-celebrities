@@ -5,10 +5,10 @@ const celebritySchema = new Schema(
   {
     name: String,
     occupation: String,
-    catchPhrase: String,
+    catchPhrase: String
   },
 
   { timestamp: true }
 );
 
-module.exports = model("Celebrity", celebritySchema);
+module.exports = model("celebrities", celebritySchema);

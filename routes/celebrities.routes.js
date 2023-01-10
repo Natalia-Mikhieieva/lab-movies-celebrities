@@ -12,11 +12,11 @@ router.get("/celebrities", (req, res, next) => {
     .catch((err) => console.log("error getting celebrities", err));
 });
 
-router.get("/create", (req, res) => {
+router.get("/celebrities/create", (req, res) => {
   res.render("celebrities/new-celebrity");
 });
 
-router.post("/create", (req, res) => {
+router.post("/celebrities/create", (req, res) => {
  // console.log(req.body);
   const { name, occupation, catchPhrase } = req.body;
   Celebrity.create({
@@ -24,7 +24,8 @@ router.post("/create", (req, res) => {
     occupation: occupation,
     catchPhrase: catchPhrase,
   });
-  res.redirect("celebrities");
-});
+  res.redirect("/celebrities");
+}); 
 
 module.exports = router;
+

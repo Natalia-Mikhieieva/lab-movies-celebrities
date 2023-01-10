@@ -5,7 +5,7 @@
   {{#each celebrities}}
     <div style="border: solid green; padding:0 0 10px 10px">
       <h2>{{name}}</h2>
-      <a href="/celebrities/{{_id}}">Link to All Celebrities</a>
+    <a href="/celebrities/{{_id}}">Link to All Celebrities</a>
       <a style="margin-left:5px" href="/celebrities/{{_id}}/edit">Edit Celebrity</a>
 
       <form action="/celebrities/{{_id}}/delete" method="POST">

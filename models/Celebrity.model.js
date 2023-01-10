@@ -1,5 +1,5 @@
 //  Add your code here
-const { Schema, model, default: mongoose } = require("mongoose");
+const { Schema, model} = require("mongoose");
 
 const celebritySchema = new Schema(
   {

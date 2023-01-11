@@ -1,0 +1,15 @@
+<h1>Here is the list of all Movies</h1>
+
+<div id="container">
+
+  {{#each movies}}
+    <div style="border: solid white; padding:0 0 10px 10px">
+      <h2>{{tile}}</h2>
+      <a style="margin-left:5px" href="/movies/{{_id}}/edit">Edit Movie</a>
+
+      <form action="/movies/{{_id}}/delete" method="POST">
+        <button style="background:gray">Delete Movie</button></form>
+    </div>
+    <br />
+  {{/each}}
+</div>

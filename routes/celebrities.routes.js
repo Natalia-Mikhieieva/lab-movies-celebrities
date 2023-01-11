@@ -17,7 +17,7 @@ router.get("/celebrities/create", (req, res) => {
 });
 
 router.post("/celebrities/create", (req, res) => {
- // console.log(req.body);
+ console.log(req.body);
   const { name, occupation, catchPhrase } = req.body;
   Celebrity.create({
     name: name,
@@ -26,6 +26,14 @@ router.post("/celebrities/create", (req, res) => {
   });
   res.redirect("/celebrities");
 }); 
+
+router.post('/celebrities/:id/delete',(req,res)=>{
+  console.log(req.params.id)
+  Book.findByIdAndDelete(req.params.id)
+  .then(()=>{
+      res.redirect('/celebrities')
+  })
+})
 
 module.exports = router;
 
